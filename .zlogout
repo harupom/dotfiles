@@ -1,1 +1,1 @@
-eval `ssh-agent -k`
+[[ "" != "$SSH_AGENT_PID" ]] && eval `ssh-agent -k`
