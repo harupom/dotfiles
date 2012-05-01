@@ -138,8 +138,10 @@ alias df="df -h"
 alias su="su -l"
 
 if [[ -d "/Applications/MacVim.app" ]]; then
-	alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
-	alias gvim="/Applications/MacVim.app/Contents/MacOS/MacVim"
+	alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+	alias vim=vi
+	alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
+	alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
 fi
 
 ## terminal configuration
