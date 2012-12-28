@@ -191,7 +191,8 @@ xterm|xterm-color|kterm|kterm-color)
 esac
 
 # DEV SETTING
-PATH=$PATH:$HOME/.rvm/bin:${HOME}/bin # Add RVM to PATH for scripting
+#PATH=$PATH:$HOME/.rvm/bin:${HOME}/bin # Add RVM to PATH for scripting
+PATH=${HOME}/bin:$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 if [ -s ${HOME}/.nvm/nvm.sh ]; then
 	. ${HOME}/.nvm/nvm.sh
