@@ -1,40 +1,40 @@
-" vim:set ts=8 sts=2 sw=2 tw=0: (‚±‚Ìs‚ÉŠÖ‚µ‚Ä‚Í:help modeline‚ğQÆ)
+" vim:set ts=8 sts=2 sw=2 tw=0: (ã“ã®è¡Œã«é–¢ã—ã¦ã¯:help modelineã‚’å‚ç…§)
 "---------------------------------------------------------------------------
-" ƒIƒŠƒWƒiƒ‹İ’è
+" ã‚ªãƒªã‚¸ãƒŠãƒ«è¨­å®š
 
-" ƒoƒbƒNƒAƒbƒv‚ğs‚í‚È‚¢
+" ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—ã‚’è¡Œã‚ãªã„
 set nobackup
 
-" ‹N“®ƒƒbƒZ[ƒW‚Ìíœ
+" èµ·å‹•æ™‚ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã®å‰Šé™¤
 set shortmess+=I
 
-" ƒtƒŠ[ƒJ[ƒ\ƒ‹ƒ‚[ƒh‚Ìİ’è
-" block  = ƒrƒWƒ…ƒAƒ‹ƒuƒƒbƒNƒ‚[ƒh‚Å
-" insert = ƒCƒ“ƒT[ƒgƒ‚[ƒh‚Å
-" all    = ‘S‚Ä‚Ìƒ‚[ƒh‚Å
+" ãƒ•ãƒªãƒ¼ã‚«ãƒ¼ã‚½ãƒ«ãƒ¢ãƒ¼ãƒ‰ã®è¨­å®š
+" block  = ãƒ“ã‚¸ãƒ¥ã‚¢ãƒ«ãƒ–ãƒ­ãƒƒã‚¯ãƒ¢ãƒ¼ãƒ‰ã§
+" insert = ã‚¤ãƒ³ã‚µãƒ¼ãƒˆãƒ¢ãƒ¼ãƒ‰ã§
+" all    = å…¨ã¦ã®ãƒ¢ãƒ¼ãƒ‰ã§
 set virtualedit=all
 
 " 
-" TAB‚ÉŠÖ‚·‚éİ’è
+" TABã«é–¢ã™ã‚‹è¨­å®š
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set smarttab
 
 " 
-" è‚¢
+" å ã„
 map <F5> mX:sp ~/.fortunes<CR>ggd/^--/<CR>Gp:wq<CR>'XGA<CR><Esc>p`X
 
 "
-" Fƒe[ƒ}
+" è‰²ãƒ†ãƒ¼ãƒ
 colorscheme evening
 
 "
-" •¶šƒR[ƒhî•ñ‚ğƒXƒe[ƒ^ƒXƒ‰ƒCƒ“‚É•\¦
+" æ–‡å­—ã‚³ãƒ¼ãƒ‰æƒ…å ±ã‚’ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒ©ã‚¤ãƒ³ã«è¡¨ç¤º
 set statusline=%n:\ %<%f\ %m%r%h%w[%{&fileformat}][%{has('multi_byte')&&\ &fileencoding!=''?&fileencoding:&encoding}]\ 0x%B=%b%=%l,%c\ %P
 
 
-" NeoBundleİ’è
+" NeoBundleè¨­å®š
 if 1 && filereadable($HOME . '/.bundle')
   source $HOME/.bundle
 endif

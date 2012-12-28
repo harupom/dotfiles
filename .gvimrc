@@ -1,50 +1,50 @@
-" vim:set ts=8 sts=2 sw=2 tw=0: (‚±‚Ìs‚ÉŠÖ‚µ‚Ä‚Í:help modeline‚ğQÆ)
+" vim:set ts=8 sts=2 sw=2 tw=0: (ã“ã®è¡Œã«é–¢ã—ã¦ã¯:help modelineã‚’å‚ç…§)
 "---------------------------------------------------------------------------
-" Bram‚Ì’ñ‹Ÿ‚·‚éİ’è—á‚ğƒCƒ“ƒNƒ‹[ƒh (•Êƒtƒ@ƒCƒ‹:vimrc_example.vim):
+" Bramæ°ã®æä¾›ã™ã‚‹è¨­å®šä¾‹ã‚’ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰ (åˆ¥ãƒ•ã‚¡ã‚¤ãƒ«:vimrc_example.vim):
 source $VIMRUNTIME/gvimrc_example.vim
 
 "---------------------------------------------------------------------------
-" ƒtƒHƒ“ƒgİ’è:
+" ãƒ•ã‚©ãƒ³ãƒˆè¨­å®š:
 "
 if has('win32')
-  " Windows—p
-  "set guifont=‚l‚r_ƒSƒVƒbƒN:h11:cSHIFTJIS
+  " Windowsç”¨
+  "set guifont=ï¼­ï¼³_ã‚´ã‚·ãƒƒã‚¯:h11:cSHIFTJIS
   set guifont=BDF_M+:h9:cSHIFTJIS
-  "set guifont=Osaka|“™•:h11:cSHIFTJIS
-  " sŠÔŠu‚Ìİ’è
+  "set guifont=Osakaâˆ’ç­‰å¹…:h11:cSHIFTJIS
+  " è¡Œé–“éš”ã®è¨­å®š
   set linespace=1
 elseif has('xfontset')
-  " UNIX—p (xfontset‚ğg—p)
+  " UNIXç”¨ (xfontsetã‚’ä½¿ç”¨)
   set guifontset=a14,r14,k14
 elseif has('mac')
-  "set guifont=Osaka|“™•:h14
+  "set guifont=Osakaâˆ’ç­‰å¹…:h14
   set guifont=menlo:h14
 endif
 
 "---------------------------------------------------------------------------
-" ƒEƒCƒ“ƒhƒE‚ÉŠÖ‚·‚éİ’è:
+" ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã«é–¢ã™ã‚‹è¨­å®š:
 "
-" ƒEƒCƒ“ƒhƒE‚Ì•
+" ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã®å¹…
 set columns=160
-" ƒEƒCƒ“ƒhƒE‚Ì‚‚³
+" ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã®é«˜ã•
 set lines=55
-" ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“‚Ì‚‚³(GUIg—p)
+" ã‚³ãƒãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³ã®é«˜ã•(GUIä½¿ç”¨æ™‚)
 set cmdheight=2
 
 "---------------------------------------------------------------------------
-" ƒIƒŠƒWƒiƒ‹İ’è
+" ã‚ªãƒªã‚¸ãƒŠãƒ«è¨­å®š
 
 set number
 
 "
-" Fƒe[ƒ}
+" è‰²ãƒ†ãƒ¼ãƒ
 colors molokai
 
 "
-" ”¼“§–¾ 0`255
+" åŠé€æ˜ 0ã€œ255
 "set transparency=224
 
-" IME ƒ‚[ƒh‚Æ”ñ IME ƒ‚[ƒh‚ÌF
+" IME ãƒ¢ãƒ¼ãƒ‰ã¨é IME ãƒ¢ãƒ¼ãƒ‰æ™‚ã®è‰²
 if has('multi_byte_ime')
   "highlight Cursor guibg=Green guifg=NONE
   highlight CursorIM guibg=Orange guifg=NONE
@@ -54,22 +54,22 @@ if has('multi_byte_ime')
   "highlight CursorIM guibg=DarkGreen guifg=NONE
 endif
 
-"set guioptions+=b   "‰º‚ÌƒXƒNƒ[ƒ‹ƒo[‚ğ•\¦
+"set guioptions+=b   "ä¸‹ã®ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ãƒãƒ¼ã‚’è¡¨ç¤º
 "set nowrap
-set guioptions-=b   "‰º‚ÌƒXƒNƒ[ƒ‹ƒo[‚ğ”ñ•\¦
+set guioptions-=b   "ä¸‹ã®ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ãƒãƒ¼ã‚’éè¡¨ç¤º
 set wrap
 
-set guioptions-=T   "ƒc[ƒ‹ƒo[‚ğŠO‚·
-set showtabline=2   "ƒ^ƒu‚ğí‚É•\¦
+set guioptions-=T   "ãƒ„ãƒ¼ãƒ«ãƒãƒ¼ã‚’å¤–ã™
+set showtabline=2   "ã‚¿ãƒ–ã‚’å¸¸ã«è¡¨ç¤º
 
 if has('gui_macvim')
-"  set imdisable     "IM‚ğ–³Œø‚É
-  set antialias     "ƒAƒ“ƒ`ƒGƒCƒŠƒAƒX‚ğ—LŒø‚É
+"  set imdisable     "IMã‚’ç„¡åŠ¹ã«
+  set antialias     "ã‚¢ãƒ³ãƒã‚¨ã‚¤ãƒªã‚¢ã‚¹ã‚’æœ‰åŠ¹ã«
 endif
 
-" ‹N“®‚ÉÅ‘å‰»
+" èµ·å‹•æ™‚ã«æœ€å¤§åŒ–
 "au GUIEnter * simalt ~x
 
-" ‰üs‚È‚Ç‚Ì•\¦
+" æ”¹è¡Œãªã©ã®è¡¨ç¤º
 set list
 set listchars=tab:^\ ,extends:<,trail:_,eol:<
