@@ -134,6 +134,7 @@ alias ll="ls -l"
 
 alias du="du -h"
 alias df="df -h"
+alias remem='du -sx / &> /dev/null & sleep 25 && kill $!'
 
 alias su="su -l"
 
@@ -201,5 +202,5 @@ fi
 
 ## load user .zshrc configuration file
 #
-[ -f ${HOME}/.zshrc.mine ] && source ${HOME}/.zshrc.mine
+[ -f ${HOME}/.zshrc.mine ] && . ${HOME}/.zshrc.mine
 
