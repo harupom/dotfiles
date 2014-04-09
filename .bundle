@@ -3,8 +3,14 @@ set nocompatible               " be iMproved
 filetype plugin indent off     " required!
 
 if has('vim_starting')
-  set runtimepath+=$HOME/.vim/bundle/neobundle.vim
-  call neobundle#rc(expand('~/.vim/bundle'))
+  if has('win32') || has('win64')
+    let $DOTVIM=$HOME.'/vimfiles'
+  else
+    let $DOTVIM=$HOME.'/.vim'
+  endif
+  set runtimepath+=$DOTVIM/bundle/neobundle.vim
+  call neobundle#rc(expand($DOTVIM.'/bundle'))
+  unl $DOTVIM
 endif
 
 NeoBundle 'https://github.com/Shougo/neobundle.vim.git'
@@ -21,7 +27,18 @@ NeoBundle 'https://github.com/tpope/vim-rails.git'
 NeoBundle 'https://github.com/thinca/vim-ref.git'
 NeoBundle 'https://github.com/thinca/vim-quickrun.git'
 NeoBundle 'https://github.com/scrooloose/nerdtree.git'
-NeoBundle 'https://github.com/Shougo/neocomplcache.git'
+"NeoBundle 'https://github.com/Shougo/neocomplcache.git'
+NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
+NeoBundle 'https://github.com/Shougo/unite.vim.git'
+NeoBundle 'https://github.com/Shougo/vimshell.vim.git'
+NeoBundle 'https://github.com/Shougo/vimproc.vim.git', {
+  \ 'build' : {
+  \     'windows' : 'make -f make_mingw32.mak',
+  \     'cygwin' : 'make -f make_cygwin.mak',
+  \     'mac' : 'make -f make_mac.mak',
+  \     'unix' : 'make -f make_unix.mak',
+  \    },
+  \ }
 
 " colors
 NeoBundle 'https://github.com/tomasr/molokai.git'

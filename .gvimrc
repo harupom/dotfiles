@@ -18,7 +18,8 @@ elseif has('xfontset')
   set guifontset=a14,r14,k14
 elseif has('mac')
   "set guifont=Osaka−等幅:h14
-  set guifont=menlo:h14
+  "set guifont=menlo:h14
+  set guifont=ricty:h16
 endif
 
 "---------------------------------------------------------------------------
@@ -34,9 +35,6 @@ set cmdheight=2
 "---------------------------------------------------------------------------
 " オリジナル設定
 
-set number
-
-"
 " 色テーマ
 colors molokai
 
